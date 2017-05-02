@@ -146,7 +146,7 @@ RUN npm install -g truffle
 #Incase you run this and connect from outside.
 EXPOSE 445
 EXPOSE 2222
-EXPOSE 5000
+EXPOSE 5001
 EXPOSE 8000
 EXPOSE 8181
 EXPOSE 8080
