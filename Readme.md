@@ -52,6 +52,8 @@ Stuff that's avalible:
 * geth
 * node
 * npm
+* Cloud9
+* tmux
 * webpack
 
 
