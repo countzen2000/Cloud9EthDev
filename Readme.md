@@ -5,7 +5,7 @@ Quickstart:
 ===========
 * Run the image as described below
 * go to [http://localhost:8181](http://localhost:8181) for Cloud 9
-* go to [http://localhost:5001/webui](http://localhost:5001/webui) for IPFS
+* Coming soon: go to [http://localhost:5001/webui](http://localhost:5001/webui) for IPFS (Problem with CORS and docker, works internally though and gets in touch with swarms properly.)
 
 Run the image:
 ==============
