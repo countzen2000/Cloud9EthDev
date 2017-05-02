@@ -5,7 +5,7 @@ Quickstart:
 ===========
 * Run the image as described below
 * go to [http://localhost:8181](http://localhost:8181) for Cloud 9
-* go to [http://localhost:5001/webui](http://localhost:8181) for IPFS
+* go to [http://localhost:5001/webui](http://localhost:5001/webui) for IPFS
 
 Run the image:
 ==============
