@@ -158,7 +158,7 @@ EXPOSE 8545
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # On entry, start sshd, start testrpc, start IPFS, start Cloud9, and run bash
-ENTRYPOINT service ssh start && ipfs init && ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001 && ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080 && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]' && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST", "OPTIONS"]' && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials '["true"]' && tmux new -s pair 'testrpc -d 0.0.0.0 --gasLimit 1111115141592' \; new-window 'c9.sh' \; new-window 'ipfs daemon' \; new-window
+ENTRYPOINT service ssh start && ipfs init && ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001 && ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080 && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]' && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST", "OPTIONS"]' && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials '["true"]' && tmux new -s pair 'testrpc -d 0.0.0.0 --gasLimit 1111115141592 -b 1' \; new-window 'c9.sh' \; new-window 'ipfs daemon' \; new-window
 
 # Start user in their source code directory...
 WORKDIR /src
