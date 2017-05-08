@@ -143,9 +143,13 @@ RUN sudo npm config set unsafe-perm=true
 RUN sudo npm install -g solidity-sha3 --allow-root
 RUN npm install -g truffle
 
+# Adding React for ya all.
+RUN npm install -g create-react-app
+
 #Incase you run this and connect from outside.
 EXPOSE 445
 EXPOSE 2222
+EXPOSE 3000
 EXPOSE 4001
 EXPOSE 4002/udp
 EXPOSE 5001
