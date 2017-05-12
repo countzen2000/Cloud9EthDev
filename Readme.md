@@ -32,6 +32,22 @@ Just run this in the terminal
 ./scripts/build-image.sh
 ```
 
+Separate commands
+=================
+If you want to run them separately, perhaps in your cloud 9 terminal windows:
+```
+docker run -v ${SRC}:/src -i --publish-all=true -p 445:445 -p 3000:3000 -p 4001:4001 -p 5001:5001 -p 2222:2222 -p 8000:8000 -p 8080:8080 -p 8181:8181 -p 8545:8545 -t countzen/blackops:latest
+service ssh start
+ipfs init
+ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
+ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST", "OPTIONS"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials '["true"]'
+ipfs daemon
+testrpc -d 0.0.0.0 --gasLimit 1111115141592 -b 1
+```
+
 TMUX:
 =====
 The output is going to your terminal using TMUX. You can switch the 'virtual windows' by:
@@ -51,6 +67,10 @@ To update image on dockerhub:
 ```
 docker push countzen/blackops
 ```
+
+GOTCHAs
+=======
+- Check your VPN if you are having issues connecting to the outside word from any service.
 
 Defaults:
 ========
