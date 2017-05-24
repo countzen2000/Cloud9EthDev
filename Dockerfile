@@ -129,7 +129,7 @@ RUN npm install -g embark
 # Install IPFS and start the daemon
 RUN mkdir /ipfs
 WORKDIR ipfs
-RUN curl -o go-ipfs.tar.gz https://dist.ipfs.io/go-ipfs/v0.4.8/go-ipfs_v0.4.8_linux-amd64.tar.gz
+RUN curl -o go-ipfs.tar.gz https://dist.ipfs.io/go-ipfs/v0.4.9/go-ipfs_v0.4.9_linux-amd64.tar.gz
 RUN tar xvfz go-ipfs.tar.gz
 RUN mv go-ipfs/ipfs /usr/local/bin/ipfs
 
