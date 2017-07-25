@@ -65,10 +65,10 @@ WORKDIR /root/.vim/plugged
 RUN git clone https://github.com/leafgarland/typescript-vim.git typescript-vim
 
 # Pimp VIM with Nerd Tree and other goodies using the Braintree setup
-WORKDIR /root
-RUN git clone https://github.com/braintreeps/vim_dotfiles.git
-WORKDIR /root/vim_dotfiles
-RUN rake
+# WORKDIR /root
+# RUN git clone https://github.com/braintreeps/vim_dotfiles.git
+# WORKDIR /root/vim_dotfiles
+# RUN ./activate.sh
 
 # Add an SSH server for social hacking i.e. pair/multi programming and configure run on port 2222
 RUN apt-get install -y openssh-server
